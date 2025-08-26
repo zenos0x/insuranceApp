@@ -1,0 +1,52 @@
+<link href="./css/header.css" rel="stylesheet" />
+<script src="./js/header.js"></script>
+<script src="../user/user.js"></script>
+<script src="../user/login.js"></script>
+<script src="../user/signUp.js"></script>
+<script src="../user/profile.js"></script>
+
+<header class="d-flex justify-content-between p-2 px-5 text-white headerContainer align-content-center">
+  <div class="d-flex align-items-center"  onclick="activateTab('home')">
+    <div class="rounded-circle overflow-hidden me-3" style="width: 3em; height: 3em; cursor: pointer">
+      <img class="img-fluid " src="../assets/logo.png" alt="logo" />
+    </div>
+    <h2 class="m=0 align-content-center" style="cursor: pointer">Vexura</h2>
+  </div>
+  <nav class="d-flex p-2 text-white justify-content-between w-50 align-items-center">
+    <p class="nav-link" data-tab="home">Home</p>
+    <p class="nav-link" data-tab="policy">Policy</p>
+    <p class="nav-link" data-tab="claim">claim</p>
+    <p class="nav-link" data-tab="renewal">Renewal</p>
+    <p class="nav-link" data-tab="BeaAgent">Become an agent</p>
+
+    <!-- <p class="header-menu-items" id="loginBtn">Login</p> -->
+    <div class="dropdown">
+      <div
+        class="rounded-circle overflow-hidden"
+        style="width: 3em; height: 3em; cursor: pointer"
+        id="userIcon"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <img class="img-fluid" src="" alt="avatar" id="header_avatar" />
+      </div>
+      <!-- <i class="fa fa-user-circle fa-2x user-icon" id="userIcon" data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer;"></i> -->
+      <ul class="dropdown-menu" id="userMenu"></ul>
+    </div>
+  </nav>
+</header>
+
+<!-- Modal -->
+<div class="modal fade" id="customModal" tabindex="-1" aria-labelledby="customModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="customModalLabel">Modal Title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="modalContent">
+        <!-- Dynamic content will be injected here -->
+      </div>
+    </div>
+  </div>
+</div>

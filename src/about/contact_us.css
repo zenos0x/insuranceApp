@@ -1,0 +1,48 @@
+.formWrapperUnique {
+  max-width: 500px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.formTitleUnique {
+  text-align: center;
+  color: #333;
+}
+
+.labelNameUnique,
+.labelEmailUnique,
+.labelPhoneUnique,
+.labelMessageUnique {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.inputNameUnique,
+.inputEmailUnique,
+.inputPhoneUnique,
+.textareaMessageUnique {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.buttonSubmitUnique {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.buttonSubmitUnique:hover {
+  background-color: #0056b3;
+}

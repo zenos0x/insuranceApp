@@ -1,0 +1,70 @@
+<script src="../renewal/renewal.js"></script>
+
+<!-- Toast Message -->
+<div class="toast-container">
+  <div id="successToast" class="toast align-items-center text-bg-success border-0" role="alert" data-bs-delay="2000">
+    <div class="d-flex">
+      <div class="toast-body">Payment done successfully!</div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <!-- Left Form -->
+    <div class="col-md-5">
+      <h3>Renew Policy</h3>
+      <form id="renewForm">
+        <div class="mb-3">
+          <label for="renewal_policyId" class="form-label">Policy ID</label>
+          <select class="form-select" id="renewal_policyId" required>
+            <option value="">Select Policy</option>
+          </select>
+          <div id="policyError" class="text-danger mt-1" style="display: none;">Invalid Policy ID</div>
+        </div>
+        <div class="mb-3">
+          <label for="expiryDate" class="form-label">Expiry Date</label>
+          <input type="text" class="form-control" id="expiryDate" readonly placeholder="Auto-filled after selecting a Policy">
+        </div>
+        <div class="mb-3">
+          <label for="package" class="form-label">Package</label>
+          <select class="form-select" id="package" required>
+            <option value="">Select Package</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="extendPeriod" class="form-label">Extend Period (Years)</label>
+          <input type="number" class="form-control" id="extendPeriod" min="1" required>
+        </div>
+
+        <!-- Payment Details -->
+        <div id="paymentDetails" class="mb-3 d-none">
+          <p>Plan Amount: ₹<span id="planAmount">0</span></p>
+          <p>GST (18%): ₹<span id="gstAmount">0</span></p>
+          <p><strong>Total Premium: ₹<span id="totalPremium">0</span></strong></p>
+        </div>
+
+        <button type="submit" class="btn btn-success">Pay Securely</button>
+      </form>
+    </div>
+
+    <!-- Right Table -->
+    <div class="col-md-7">
+      <h4>Previous Renewals</h4>
+      <table class="table table-bordered" id="renewalTable">
+        <thead class="table-light">
+          <tr>
+            <th>S.No</th>
+            <th>Renewal ID</th>
+            <th>Policy ID</th>
+            <th>Renewal Date</th>
+            <th>New Premium</th>
+            <th>Expiry Year</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+</div>

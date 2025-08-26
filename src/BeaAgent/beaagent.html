@@ -1,0 +1,37 @@
+<script src="../BeaAgent/beaagent.js"></script>
+
+<div class="d-flex p-3">
+  <div class="w-50 p-5 d-flex flex-column align-items-center justify-content-center">
+    <form id="BecomeAnAgentForm" class="w-75">
+      <div class="mb-3">
+        <label for="be_a_agent_name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="be_a_agent_name" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="dob" class="form-label">Date of Birth</label>
+        <input type="date" class="form-control" id="be_a_agent_dob" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="be_a_agent_city" class="form-label">City</label>
+        <select class="form-select" id="be_a_agent_city" required></select>
+      </div>
+
+      <div class="mb-3">
+        <label for="mobile" class="form-label">Mobile Number</label>
+        <input type="tel" class="form-control" id="be_a_agent_mobile" pattern="[0-9]{10}" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="be_a_agent_email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="be_a_agent_email" required />
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  <div class="w-50 p-5">
+    <img class="img-fluid" src="../assets/beaagent.png" />
+  </div>
+</div>

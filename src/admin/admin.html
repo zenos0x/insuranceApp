@@ -1,0 +1,167 @@
+<link rel="stylesheet" href="../admin/admin.css" />
+<script src="../admin/admin.js"></script>
+
+<div class="container mt-4">
+  <h2>Admin Dashboard</h2>
+
+  <!-- Buttons -->
+  <div class="mb-4">
+    <button id="btnClaimApproval" class="btn btn-primary me-2">Claim Approval</button>
+    <button id="btnClaimList" class="btn btn-info me-2">Claim List</button>
+    <button id="btnRenewalList" class="btn btn-warning me-2">Renewal List</button>
+    <button id="CustomerList" class="btn btn-primary me-2">Customer List</button>
+    <button id="btnRoleAssign" class="btn btn-success me-2">Role Assign</button>
+  </div>
+
+  <!-- Claim Approval Section -->
+  <div id="claimApprovalSectionContainer" class="admin_part_hidden">
+    <h4>Policy Claims</h4>
+    <table id="claimApprovalSection" class="table table-bordered">
+      <thead>
+        <tr>
+          <th>S.No.</th>
+          <th>Customer ID</th>
+          <th>Claim ID</th>
+          <th>Policy ID</th>
+          <th>Amount</th>
+          <th>Date</th>
+          <th>Status</th>
+          <th>Action</th>
+          <th>Remark</th>
+          <th>Submit</th>
+        </tr>
+      </thead>
+      <tbody id="claimTableBody">
+        <!-- Dynamic rows -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Role Assign Section -->
+  <div id="roleAssignSection" class="admin_part_hidden">
+    <h4>Agent Roles</h4>
+    <table id="agentTable" class="table table-bordered">
+      <thead>
+        <tr>
+          <th>S.No.</th>
+          <th>Agent Id</th>
+          <th>Name</th>
+          <th>Role</th>
+          <th>District</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Dynamic rows -->
+      </tbody>
+    </table>
+
+    <button id="btnAddAgentForm" class="btn btn-success">Add Agent</button>
+
+    <!-- Add/Edit Agent Form -->
+
+    <div id="addAgentForm" class="mt-20 admin_part_hidden">
+      <form id="agentForm">
+
+        <!-- User -->
+        <div class="mb-3">
+          <label for="agentUser" class="form-label">User</label>
+          <select id="agentUser" name="agentUser" class="form-select" required>
+            <!-- Options will be injected via JS -->
+          </select>
+        </div>
+
+        <!-- Role -->
+        <div class="mb-3">
+          <label for="agentRole" class="form-label">Role</label>
+          <select id="agentRole" name="agentRole" class="form-select" required>
+            <option value="AGENT">Agent</option>
+            <option value="ADMIN">Admin</option>
+          </select>
+        </div>
+
+        <!-- District -->
+        <div class="mb-3">
+    <label for="districtSearch" class="form-label">Select District</label>
+    <div class="multi-select-container">
+        <div id="selected-districts" class="selected-items"></div>
+        <input type="text" id="districtSearch" class="form-control" placeholder="Search Districts">
+    </div>
+    <div id="district-dropdown" class="dropdown-container"></div>
+    <select id="agentDistrict" name="agentDistrict" class="form-select" multiple required style="display: none;">
+        <!-- Options will be injected via JS -->
+    </select>
+</div>
+
+        <!-- Submit Button -->
+        <button type="submit" id="btnAddAgent" class="btn btn-primary">Add</button>
+      </form>
+    </div>
+
+
+  </div>
+
+  <!-- Claim List Section -->
+  <div id="claimListSection" class="admin_part_hidden">
+    <h4>Claims</h4>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>S.No</th>
+          <th>Customer ID</th>
+          <th>Claim ID</th>
+          <th>Policy ID</th>
+          <th>ID Amount</th>
+          <th>Date</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="claimListTableBody">
+        <!-- Dynamic rows -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Renewal List Section -->
+  <div id="renewalListSection" class="admin_part_hidden">
+    <h4>Renewals</h4>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>S.No</th>
+          <th>Customer ID</th>
+          <th>Renewal ID</th>
+          <th>Policy ID</th>
+          <th>Renewal Date</th>
+          <th>New Premium</th>
+          <th>Expiry Year</th>
+        </tr>
+      </thead>
+      <tbody id="renewalListTableBody">
+        <!-- Dynamic rows -->
+      </tbody>
+    </table>
+  </div>
+  
+  <!-- customer List Section -->
+  <div id="customerSection" class="admin_part_hidden">
+    <h4>Customers</h4>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>S.No</th>
+          <th>Name</th>
+          <th>Customer ID</th>
+          <th>Mail</th>
+          <th>Mobile Number</th>
+          <th>Address</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="customerBody">
+        <!-- Dynamic rows -->
+      </tbody>
+    </table>
+  </div>
+  
+</div>

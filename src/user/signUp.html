@@ -1,0 +1,109 @@
+<link rel="stylesheet" href="../user/css/signup.css">
+<script src="../user/signUp.js"></script>
+
+
+<div id="signUpSection">
+  <div class="signUp-container d-flex">
+    <!-- Form Section -->
+    <div class="signUp-form d-flex w-50 justify-content-center align-items-center">
+      <form id="signUpForm" class="w-100 px-4">
+        <!-- Name -->
+        <div class="form-group mb-3">
+          <label>Name</label>
+          <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group mb-3">
+          <label>Email</label>
+          <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+        </div>
+
+        <!-- Date of Birth -->
+        <div class="form-group mb-3">
+          <label for="signUp_dob" class="form-label">Date of Birth</label>
+          <input type="date" class="form-control" id="signUp_dob" name="dateOfBirth" required />
+        </div>
+
+        <!-- Gender -->
+        <div class="form-group mb-3">
+          <label>Gender</label>
+          <div class="d-flex justify-content-between">
+            <div>
+              <input type="radio" id="male" name="gender" value="Male" required>
+              <label>Male</label>
+            </div>
+            <div>
+              <input type="radio" id="female" name="gender" value="Female">
+              <label>Female</label>
+            </div>
+            <div>
+              <input type="radio" id="other" name="gender" value="Other">
+              <label>Other</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Number -->
+        <div class="form-group mb-3">
+          <label>Mobile Number</label>
+          <input type="tel" id="mobile" name="mobile" class="form-control" placeholder="Enter your mobile number" required>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center gap-2">
+          <!-- Password -->
+          <div class="form-group mb-3 position-relative">
+            <label>Password</label>
+            <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password" required>
+            <div id="passwordStrengthFeedback" class="invalid-feedback position-absolute top-100 start-0 bg-white">
+              Password must contain:
+              <ul class="mb-0 mt-1">
+                <li id="length-req">At least 8 characters</li>
+                <li id="uppercase-req">One uppercase letter</li>
+                <li id="number-req">One number</li>
+                <li id="special-req">One special character (!@#$%^&*(),.?":{}|<>)</li>
+              </ul>
+            </div>
+            <span id="passwordStrengthIcon" class="position-absolute top-50 end-0 translate-middle-y me-3" style="display:none;">
+            </span>
+          </div>
+
+          <!-- Confirm Password -->
+          <div class="form-group mb-3 position-relative">
+            <label>Confirm Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" placeholder="Re-enter your password" required>
+            <div id="passwordMatchFeedback" class="invalid-feedback position-absolute top-100 start-0 bg-white">Passwords do not match.</div>
+            <span id="passwordMatchIcon" class="position-absolute top-50 end-0 translate-middle-y me-3" style="display:none;">
+            </span>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center gap-2">
+          <!-- Address -->
+            <div class="form-group mb-3">
+              <label>Address</label>
+              <input type="text" name="address" id="signUp_address" class="form-control" placeholder="current Address" required>
+            </div>
+
+            <!-- City -->
+            <div class="form-group mb-3">
+              <label>City</label>
+              <input type="text" name="city" id="signUp_city" class="form-control" placeholder="current city" required>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-success btn-block w-100">Sign Up</button>
+        <p class="mt-3 text-center">
+          Already have an account?
+          <a data-bs-target="#customModal" href="#" id="loginBtn">Sign in here</a>
+        </p>
+      </form>
+    </div>
+
+    <!-- Illustration Section -->
+    <div class="illustration w-50 d-flex justify-content-center align-items-center">
+      <img class="img-fluid" src="../assets/signupCover.png" alt="Sign Up Illustration" />
+    </div>
+  </div>
+</div>

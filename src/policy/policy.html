@@ -1,0 +1,70 @@
+<script src="../policy/policy.js"></script>
+<link rel="stylesheet" href="../policy/policy.css" />
+
+<div class="container mt-1">
+  <h2 class="text-center mb-4">Policies Dashboard</h2>
+  <button
+    class="btn btn-success addPolicyBtn"
+    onclick="activateTab('calculator')"
+  >
+    Add new Policy
+  </button>
+</div>
+<div class="container mt-4">
+  <!-- Navigation Buttons -->
+  <div class="mb-4">
+    <!-- <button class="btn btn-info" onclick="scrollToSection('updatePolicySection')">Update Policy Information</button> -->
+  </div>
+
+  <!-- View Current Policies Section -->
+  <section id="viewPoliciesSection">
+    <h2>View Current Policies</h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Policy Number</th>
+          <th>Vehicle</th>
+          <th>Coverage Type</th>
+        </tr>
+      </thead>
+      <tbody id="policy-table-body">
+        <!-- Policy data will be loaded here dynamically -->
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Update Policy Information Section -->
+  <section id="updatePolicySection">
+    <h2>Update Policy Information</h2>
+    <form>
+      <div class="mb-3">
+        <label for="policyNumberSelect" class="form-label">Policy Number</label>
+        <select class="form-select" id="policyNumberSelect">
+          <option selected>Choose a policy to update...</option>
+          <!-- Policy numbers will be loaded here -->
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="currentPolicy" class="form-label">Current Policy</label>
+        <input type="text" class="form-control" id="currentPolicy" readonly />
+      </div>
+
+      <div class="mb-3">
+        <label for="preferredPolicy" class="form-label">Preferred Policy</label>
+        <select class="form-select" id="preferredPolicy">
+          <!-- Options will be loaded dynamically -->
+        </select>
+      </div>
+
+      <!-- Premium Difference Display -->
+      <div
+        id="premiumDifference"
+        class="alert alert-info mt-3"
+        style="display: none"
+      ></div>
+
+      <button type="submit" class="btn btn-success">Update</button>
+    </form>
+  </section>
+</div>
